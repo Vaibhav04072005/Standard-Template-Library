@@ -126,11 +126,46 @@ void deletion_vector(){
 
 
 void insert(){
+    vector<int> v ={1,2,3,4,5};
+    v.insert(v.begin()+1 , 5);  // here i insert into 5 at just after the 1
+    for (vector<int> :: iterator at = v.begin(); at != v.end(); at++){
+        cout<<*(at)<<"  ";
+    }
+    cout<<endl;
     
+
+    // v.insert(begining postition,no. of element , what element is )
+
+
+    // inserting one vector to other
+
+    vector<int>copy(2,50);
+    v.insert(v.begin(),copy.begin(),copy.end());
+for (vector<int> :: iterator at = v.begin(); at != v.end(); at++){
+        cout<<*(at)<<"  ";
+    }
+
+    cout<<v.size()<<"    ";  // give the number of elment in the vector
+
+    v.pop_back( );  // remove the last element  of the vector
+
+
+
+    // v1 ->{10,20}
+    // v2 ->{30,40}
+
+    // v1.swap(v2)  change v2 to v1 and v1 to v2
+
+    // v.clear();  erases the entire vector
+
+    cout<<v.empty()<<" ";
+
+
 }
 int main()
 {
     // accesingelment_vector();
-    deletion_vector();
+    // deletion_vector();
+    insert();
 return 0;
 }
